@@ -741,23 +741,29 @@ with col4:
 # FOOTER
 # =========================================================
 
-st.markdown(
-    """
-    <style>
-    .footer {
-        position: fixed;
-        bottom: 10px;
-        right: 20px;
-        color: gray;
-        font-size: 13px;
-        opacity: 0.7;
-        z-index: 100;
-    }
-    </style>
+footer = """
+<style>
+footer {
+    visibility: hidden;
+}
 
-    <div class="footer">
-        Developed by <b>Nilakshi Senapati</b>
-    </div>
-    """,
+.footer-text {
+    position: fixed;
+    left: 15px;
+    bottom: 10px;
+    font-size: 13px;
+    color: gray;
+    opacity: 0.75;
+    z-index: 999999;
+}
+</style>
+
+<div class="footer-text">
+    Developed by <b>Nilakshi Senapati</b>
+</div>
+"""
+
+st.markdown(
+    footer,
     unsafe_allow_html=True
 )
